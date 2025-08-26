@@ -79,7 +79,7 @@ extern "C" void app_main(void) {
     ESP_ERROR_CHECK(esp_event_loop_create(&scale_loop_args, &g_scale_loop));
 
 
-    auto setup = SoftAPSetup();
+    auto setup = SoftAPSetup("CatFountain-Setup");
     setup.start();
 
     static auto *server = new WebServer();
